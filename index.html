@@ -1,173 +1,460 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>telecom rf analyzer</title>
-    <link rel="stylesheet" href="style.css">
+
+
+<title>TelecomTech | Telecommunications Engineering</title>
+
+<link rel="stylesheet" href="style.css">
+
+
 </head>
+
 
 <body>
 
-    <header>
-        <div class="logo">telecom rf analyzer</div>
 
-        <nav>
-            <a href="@#home">Home</a>
-            <a href="rf">Rf calculator</a>
-            <a href="radar">Radar</a>
-            <a href="learn">learn</a>
-        </nav>    
-    </header>
 
-    <main>
-        <!--HOME-->
-        <section id="Home"class="hero">
-            <div>
-                <h1>Telecommmunications made simple</h1>
+<nav class="navbar">
 
-                <p>
-                    Explore radio frequency eirless communicaton,
-                    antennas and radar through simple interactive tools.
-                </p>
+   <a href="index.html" class="logo">
+    <img src="logo.png" alt="TelecomTech logo">
+    <span>TelecomTech</span>
+   </a>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#problems">Problems</a></li>
+        <li><a href="#rf">RF Analyzer</a></li>
+        <li><a href="#radar">Radar</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#network">Network Simulation</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
 
-                <a href="#rf" class="buttonS">Start Rf calculator</a>
-            </div>
-        </section>
+</nav>
 
-        <!--RF CALACULATOR-->
-        <section id="rf" class="section">
-            
-            <h2>RF Wavelenght calculator</h2>
 
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-tag">TELECOMMUNICATION ENGINEERING</p>
+
+        <h1>Building the Future of Communication</h1>
+
+        <p class="hero-text">
+            Explore telecommunications technology through RF analysis,
+            wireless communication, radar systems, network optimization,
+            and engineering solutions for real-world problems.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#rf" class="btn primary-btn">Try RF Analyzer</a>
+            <a href="#services" class="btn secondary-btn">Explore Services</a>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="signal-icon">📡</div>
+
+        <h2>TelecomTech</h2>
+
+        <p>
+            Engineering technology to connect people,
+            systems, and communities.
+        </p>
+
+        <div class="signal-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="problems" class="problems-section">
+
+        <div class="section-heading">
+            <p>ENGINEERING FOR THE REAL WORLD</p>
+
+            <h2>Problems We Want to Solve</h2>
+
+            <span>
+                TelecomTech is designed to explore engineering solutions
+                to communication challenges affecting people and communities.
+            </span>
+        </div>
+
+        <div class="problem-grid">
+
+            <div class="problem-card">
+            <div class="problem-icon">📶</div>
+            <h3>Poor Network Coverage</h3>
             <p>
-                Enter a frequency and calculatorits Wavelengh.
+                Explore technologies that can help improve communication
+                coverage in underserved and rural communities.
             </p>
+        </div>
 
-            <form id="rfForm">
+        <div class="problem-card">
+            <div class="problem-icon">🌍</div>
+            <h3>Rural Connectivity</h3>
+            <p>
+                Investigate affordable wireless and satellite communication
+                approaches for communities with limited connectivity.
+            </p>
+        </div>
 
-                <label for="frequency">
-                    frequency
-                </label>
-                
+        <div class="problem-card">
+            <div class="problem-icon">🚨</div>
+            <h3>Emergency Communication</h3>
+            <a href="#services" class="problem-btn">Explore Solution</a>
+            <p>
+                Explore communication systems that could help maintain
+                connectivity during emergencies and disasters.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">📡</div>
+            <h3>Network Optimization</h3>
+                <p>
+                    Study RF signals, antennas, frequencies and network
+                    performance to improve communication systems.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+<section id="rf" class="section">
+
+    <h2>📡 RF Frequency Analyzer</h2>
+
+    <p class="section-description">
+        Enter a frequency to calculate wavelength, period and
+        angular frequency.
+    </p>
+
+    <div class="card rf-card">
+
+        <div class="input-group">
+
+            <label for="frequency">
+                Frequency
+            </label>
+
+            <div class="frequency-input">
+
                 <input
-                type="number"
-                id="frequency"
-                placeholder="Enter frequency"
-                min="0"
-                step="any"
+                    type="number"
+                    id="frequency"
+                    placeholder="Example: 100"
+                    min="0"
+                    step="any"
                 >
 
-                <label for="unit">
-                    frequency unit
-                </label>
-
-                <input
-                 type="number"
-                 id="frequency"
-                 placeholder="Enter frequency"
-                 step="any"
-                 min="0"
-                 required
-                >     
-
                 <select id="unit">
-                    <option value="1">Hz</option>
-                    <option value="1000">kHz</option>
-                    <option value="1000000">MHz</option>
-                    <option value="100000000">GHz</option>
+
+                    <option value="Hz">Hz</option>
+                    <option value="kHz">kHz</option>
+                    <option value="MHz" selected>MHz</option>
+                    <option value="GHz">GHz</option>
+
                 </select>
 
-                <button type"submit">
-                    calculate Wavelenght
-                </button>
+            </div>
 
-                <div id="result" class="result">
-                    Enter a frequency to begin.
-                </div>    
-            
-            </form>
-            
+        </div>
 
-    
-        </section>
+        <button onclick="calculateRF()">
+            Calculate RF Properties
+        </button>
 
-        <!--RADAR-->
-        <section id="radar" class="section">
-            <H2>RADAR Simulator</H2>
+        <div id="rfResult" class="result">
 
-            <p>This section will simulate how radar detects the distance of an object.</p>
+            <span class="result-icon">📊</span>
 
-            <div class="radar-box">
-                <div class="radar-circle"id="radar-Circle">
-                    <div class="radar-sweep"></div>
-                    <div class="radar-line" id="radarline"></div>
+            <span>
+                Enter a frequency and click calculate.
+            </span>
 
-                    <div class="target"id="radarTarget">
+        </div>
 
-                    </div>
+    </div>
+
+</section>
+
+<section id="radar" class="section">
+
+    <h2>🛰️ Radar Simulation</h2>
+
+    <p class="section-description">
+        An educational radar visualization showing simulated targets.
+    </p>
+
+    <div class="card radar-card">
+
+        <div class="radar-status">
+            <span class="status-dot"></span>
+            RADAR SYSTEM ACTIVE
+        </div>
+
+        <div class="radar">
+
+            <div class="radar-line"></div>
+
+            <div class="target target1">
+                <span>Target 1</span>
+            </div>
+
+                <div class="target target2">
+                    <span>Target 2</span>
                 </div>
-                <p id="radarStatus">
-                 Radar system ready.
-                </p>
 
-                <button onclick="runRadar()">
-                   scan target
-                </button>
+            <div class="target target3">
+                <span>Target 3</span>
             </div>
 
-            
-        </section>
+        </div>
 
-        <!--LEARNING-->
-        <section id="learn" class="section">
-
-            <h2>Telecommmunications learning</h2>
-
-          <div class="cards">
-
-            <div class="cards">
-                <h3>radio frequency</h3>
-                <p>
-                   RF is electromagnetic radiation used to transmit information wirelessly
-                </p>
+        <div class="radar-info">
+            <div class="radar-info">
+                <p>🟢 Scanner: <strong>ACTIVE</strong></p>
+                <p>📡 Frequency: <strong>10 GHz</strong></p>
+                <p>🎯 Targets detected: <strong>3</strong></p>
+                <p>📏 Target 1: <strong>2.4 km</strong></p>
+                <p>📏 Target 2: <strong>4.8 km</strong></p>
+                <p>📏 Target 3: <strong>7.2 km</strong></p>
             </div>
+        </div>
 
-            <div class="cards">
-                <h3>Wireless communicaton</h3>
-                <p>
-                    wireless communication sends information through
-                    electromagnetic waves without physical cables.
-                </p>
+    </div>
+
+</section>
+          
+<section id="services" class="section">
+
+    <h2>📶 Our Services</h2>
+
+    <p class="section-description">
+        Explore the major areas of telecommunications engineering.
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <div class="service-icon">📡</div>
+            <h3>RF Analysis</h3>
+            <p>
+                Analyze frequency, wavelength, period and
+                radio-frequency systems.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🛰️</div>
+            <h3>Radar Systems</h3>
+            <p>
+                Learn how radar systems use electromagnetic
+                waves to detect targets.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Wireless Networks</h3>
+            <p>
+                Explore wireless communication and modern
+                network technologies.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📊</div>
+            <h3>Signal Analysis</h3>
+            <p>
+                Study signal frequency, power and communication
+                performance.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="network">
+    <h2>Network Simulation</h2>
+
+    <p>
+        Simulate basic wireless network conditions using example telecom data.
+    </p>
+
+    <div class="network-box">
+        <h3>Wireless Network Analysis</h3>
+
+        <label for="networkUsers">Number of Users:</label>
+        <input type="number" id="networkUsers" placeholder="Enter users">
+
+        <label for="signalStrength">Signal Strength (dBm):</label>
+        <input type="number" id="signalStrength" placeholder="Example: -70">
+
+        <button onclick="simulateNetwork()">Analyze Network</button>
+
+        <p id="networkResult"></p>
+
+            <div class="signal-meter">
+                <div id="signalBar"></div>
             </div>
+    </div>
+</section>
 
-            <div class="cards">
-                <h3>Radar</h3>
-                <p>
-                    Radar uses radio waves to detect object and
-                    determine information such as their distance.
-                </p>
-            </div>
+<p class="meter-label">Network Utilization</p>
 
-            <div class="cards">
-                <h3>Antennas</h3>
-                <p>
-                    An antennas converts electrical signals into electromagnetic
-                    waves and can also receive them
-                </p>
-            </div>
+<div class="signal-meter">
+    <div id="utilizationBar"></div>
+</div>
 
-          </div>
+<section id="contact" class="section">
 
-        </section>
+    <h2>📞 Contact Us</h2>
 
-    </main>
+    <p class="section-description">
+        Have a question? Send us a message.
+    </p>
 
-    <footer>
-        <p> 2026 telecom RF analyzer | electrical & Electronic Engineering project</p>
-    </footer>
+    <div class="contact-card">
 
-    <script src="script.js"></script>
-    
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+        <p id="contactResult"></p>
+
+    </div>
+
+</section>
+
+<section id="rf-analyzer" class="rf-section">
+
+    <div class="rf-content">
+        <h2>Rf Frequency Analyzer</h2>
+
+        <p>
+            Analyze radio frequencies and explore
+            important Telecommunications parameters.
+        </p>
+
+        <a href="#rf" class="btn primary-btn">
+            Start Analysis
+        </a>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+
+    <div class="about-content">
+
+        <h2>About Telecom Tech</h2>
+
+        <p>
+            TelecomTech is an educational telecommunications
+            engineering platform designed to help students 
+            understand RF systems,communication technology,
+            and engineering concepts.
+        </p>
+
+        <p>
+            The platform combines engineering knowledge with interactive tools to make telecommunications
+            easier to learn and explore.
+        </p>
+    </div>
+</section>
+
+<section id="tools" class="tools-section">
+
+    <h2>Engineering Tools</h2>
+
+    <p class="tools-into">
+        Explore interactive tools designed for
+        telecommunications and electrical engineering.
+    </p>
+
+    <div class="tools-container">
+
+        <div class="tool-card">
+            <div class="tool-icon">📡</div>
+            <h3>RF Analyzer</h3>
+
+            <p>
+                Analyze radio frequency values
+                and telecommunications parometers.
+            </p>
+            <a href="#rf" class="tool-btn">open Tool</a>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">🎯</div>
+            <h3>ComingSoon</h3>
+            <p>
+                More engineering Calculators
+                and analysis tools will be added.
+            </p>
+            <span class="coming-soon">Coming Soon</span>
+        </div>
+    </div>
+</section>
+<footer>
+
+    <h3>📡 TelecomTech</h3>
+
+    <p>
+        RF • Radar • Wireless • Telecommunications
+    </p>
+
+    <p>
+        © 2026 TelecomTech. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
